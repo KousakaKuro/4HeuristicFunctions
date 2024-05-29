@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Heuristic Functions</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'><link rel="stylesheet" href="CSS/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<nav class="flex-nav">
+  <div class="container">
+    <div class="grid">
+      <div class="column-xs-9 column-md-8">
+        <p id="logo">G12.IMT.MST<span id="highlight">.</span></p>
+      </div>
+      <div class="column-xs-3 column-md-4">
+        <a href="#" class="toggle-nav">Menu <i class="ion-navicon-round"></i></a>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="simulation.html">Simulation</a></li>
+          <li><a href="index.html">Dictionary</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+<main class="intro-section">
+  <div class="container">
+    <div class="grid">
+      <div class="column-xs-12">
+        <ul class="slider">
+          <li class="slider-item active">
+            <div class="intro">
+              <a href="#">
+                <h1 class="title"><span class="underline">A* Search</span></h1>
+              </a>
+            </div>
+            <div class="grid vertical">
+              <div class="column-xs-12 column-md-2 hide-mobile">
+              </div>
+              <div class="column-xs-12 column-md-10">
+                <div class="image-holder">
+                  <img src="https://blog.finxter.com/wp-content/uploads/2021/12/Python-blog-A_star-Algorithm.gif">
+                </div>
+                <div class="grid">
+                  <div class="column-xs-12 column-md-9">
+                    <p class="description"> <span id="highlight">Definition: </span>A* search is a pathfinding algorithm that finds the shortest path between a start node and a goal node in a weighted graph. It is an informed search algorithm, which means that it uses a heuristic function to estimate the cost of the remaining path from a node to the goal.</p>
+                    <p class="description"> <span id="highlight">How it works: </span> A* search starts by adding the start node to a priority queue. The priority queue is ordered by the estimated cost of the path from the start node to each node. At each step, the A* search algorithm removes the node with the lowest estimated cost from the priority queue and expands it. This means that the A* search algorithm explores the nodes that it believes are most likely to contain the shortest path first.</p>
+                    <p class="description"> <span id="highlight">Strengths: </span>A* search is generally considered to be the most efficient pathfinding algorithm. It is guaranteed to find the shortest path if the heuristic function is admissible, which means that it never overestimates the cost of the remaining path.</p>
+                    <p class="description"> <span id="highlight">Weaknesses: </span>A* search can be computationally expensive, especially for large graphs. It can also be difficult to find a good heuristic function for some problems.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="slider-item">
+            <div class="intro">
+              <a href="#">
+                <h1 class="title"><span class="underline">Dijkstra Search</span></h1>
+              </a>
+            </div>
+            <div class="grid vertical">
+              <div class="column-xs-12 column-md-2 hide-mobile">
+              </div>
+              <div class="column-xs-12 column-md-10">
+                <div class="image-holder">
+                  <img src="https://miro.medium.com/v2/resize:fit:1400/1*3aibaGt1-zimnwreliwX0A.gif">
+                </div>
+                <div class="grid">
+                  <div class="column-xs-12 column-md-9">
+                    <p class="description"> <span id="highlight">Definition: </span>Dijkstra's algorithm is an algorithm for finding the shortest paths between nodes in a graph. It is a greedy algorithm, which means that it always chooses the node with the least known distance from the source node.</p>
+                    <p class="description"> <span id="highlight">How it works: </span> Dijkstra's algorithm starts by initializing the distance from the source node to all other nodes to infinity. It then adds the source node to a priority queue. At each step, the Dijkstra algorithm removes the node with the lowest known distance from the priority queue and relaxes its neighbors. Relaxing a neighbor means updating its known distance to the source node if the new distance is less than the previous distance.</p>
+                    <p class="description"> <span id="highlight">Strengths: </span>Dijkstra's algorithm is guaranteed to find the shortest paths between all nodes in the graph. It is also relatively efficient, especially for sparse graphs.</p>
+                    <p class="description"> <span id="highlight">Weaknesses: </span>Dijkstra's algorithm can be computationally expensive for large graphs. It can also be difficult to implement in a distributed setting.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="slider-item">
+            <div class="intro">
+              <a href="#">
+                 <h1 class="title"><span class="underline">Best First Search</span></h1>
+              </a>
+            </div>
+            <div class="grid vertical">
+              <div class="column-xs-12 column-md-2 hide-mobile">
+              </div>
+              <div class="column-xs-12 column-md-10">
+                <div class="image-holder">
+                  <img src="https://blog.finxter.com/wp-content/uploads/2021/12/Best-first-search.gif">
+                </div>
+                <div class="grid">
+                  <div class="column-xs-12 column-md-9">
+                    <p class="description"> <span id="highlight">Definition: </span>Best first search is a general search algorithm that explores the nodes with the lowest estimated cost first. The estimated cost can be any function that assigns a non-negative number to each node.</p>
+                    <p class="description"> <span id="highlight">How it works: </span>Best first search starts by adding the start node to a priority queue. The priority queue is ordered by the estimated cost of the node. At each step, the best first search algorithm removes the node with the lowest estimated cost from the priority queue and expands it.</p>
+                    <p class="description"> <span id="highlight">Strengths: </span>Best first search is a general algorithm that can be used to solve a variety of search problems. It is also relatively efficient, especially for problems where the estimated cost function is accurate.</p>
+                    <p class="description"> <span id="highlight">Weaknesses: </span>Best first search is not guaranteed to find the optimal solution to a problem. It can also be computationally expensive for large problems.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="slider-item">
+            <div class="intro">
+              <a href="#">
+                <h1 class="title"><span class="underline">Bidirectional Search</span></h1>
+              </a>
+            </div>
+            <div class="grid vertical">
+              <div class="column-xs-12 column-md-2 hide-mobile">
+              </div>
+              <div class="column-xs-12 column-md-10">
+                <div class="image-holder">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSM2tmMNQMxBXi4Y_jO_AHTBUAg9h6tsq6-w&usqp=CAU">
+                </div>
+                <div class="grid">
+                  <div class="column-xs-12 column-md-9">
+                    <div class="intro show-mobile">
+                    </div>
+                    <p class="description"> <span id="highlight">Definition: </span>Bidirectional search is a search algorithm that starts from the start node and the goal node simultaneously and works its way towards each other. It is a depth-first search algorithm that uses a queue to keep track of the nodes that have been visited.</p>
+                    <p class="description"> <span id="highlight">How it works: </span>Bidirectional search starts by adding the start node and the goal node to a queue. At each step, the bidirectional search algorithm removes the node with the least estimated cost from the queue and expands it. If the two nodes meet, then the bidirectional search algorithm has found a solution.</p>
+                    <p class="description"> <span id="highlight">Strengths: </span>Bidirectional search is guaranteed to find the shortest path between the start node and the goal node if the graph is acyclic. It is also relatively efficient, especially for problems where the estimated cost function is accurate.</p>
+                    <p class="description"> <span id="highlight">Weaknesses: </span>Bidirectional search can be computationally expensive for large problems. It can also be difficult to implement in a distributed setting.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      <div class="grid">
+        <div class="column-xs-12">
+          <div class="controls">
+              <button class="previous">
+                <span class="visually-hidden">Previous</span>
+                <span class="icon arrow-left" aria-hidden="true"></span>
+              </a>
+              <button class="next">
+                <span class="visually-hidden">Next</span>
+                <span class="icon arrow-right" aria-hidden="true"></span>
+              </a>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</main>
+  <script  src="JS/script.js"></script>
+</body>
+</html>
